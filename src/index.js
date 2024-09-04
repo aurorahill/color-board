@@ -92,7 +92,7 @@ slider.addEventListener('touchmove', showSliderValue);
 createSquares();
 
 const handleFooterHeight = () => {
-  const squareHeight = 0.02 * innerHeight + 6;
+  const squareHeight = 0.03 * innerHeight + 6;
   const boxHeight =
     (Math.floor((innerHeight - box.offsetTop) / squareHeight) - 1) *
     squareHeight;
