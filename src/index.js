@@ -69,7 +69,7 @@ const showSliderValue = () => {
 };
 
 const handleTouchMove = (event) => {
-  // event.preventDefault();
+  event.preventDefault();
 
   const touch = event.touches[0];
   const element = document.elementFromPoint(touch.clientX, touch.clientY);
