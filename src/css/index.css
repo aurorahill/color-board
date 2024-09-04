@@ -1,0 +1,81 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #000;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.typing {
+  width: 80%;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 3vh;
+  color: greenyellow;
+}
+.typing p {
+  margin: 0;
+  line-height: 150%;
+  text-shadow: 0 0 2px greenyellow;
+}
+.typing p::before {
+  content: "> ";
+}
+.typing p:nth-last-of-type(1):after {
+  content: "_";
+  -webkit-animation: cursor 0.3s infinite linear alternate;
+          animation: cursor 0.3s infinite linear alternate;
+}
+
+.robot {
+  width: 28vh;
+  padding: 10%;
+}
+
+@media (orientation: landscape) {
+  body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-height: 100vh;
+  }
+  .typing {
+    width: 80%;
+    font-size: 3vw;
+  }
+  .typing p {
+    padding-right: 5%;
+  }
+  .robot {
+    width: 35%;
+    padding: 0 5%;
+  }
+}
+@-webkit-keyframes cursor {
+  0%, 30% {
+    opacity: 0;
+  }
+  70%, 100% {
+    opacity: 1;
+  }
+}
+@keyframes cursor {
+  0%, 30% {
+    opacity: 0;
+  }
+  70%, 100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=index.css.map */
